@@ -1,19 +1,29 @@
 package com.example.wooyj
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import com.example.wooyj.adapter.MyRankingAdapter
 import com.example.wooyj.data.Status
 import com.example.wooyj.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+
+/**
+ *
+ * 2022/09/02
+ *
+ * MainActivity
+ *
+ * @author wooyj
+ *
+ */
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
-
-    private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,27 +31,20 @@ class MainActivity : AppCompatActivity() {
             Timber.plant(Timber.DebugTree())
         }
         binding = ActivityMainBinding.inflate(layoutInflater)
-        var actionbar = binding.toolbar
-        setSupportActionBar(actionbar)
+        setMyToolbar()
         setContentView(binding.root)
-
-        observeViewModel()
     }
 
-    private fun observeViewModel() {
-        viewModel.res.observe(this) {
-            when(it.status){
-                Status.SUCCESS->{
-                    //TODO("받아온 데이터 바인딩 처리할 것.")
-                }
-                Status.ERROR->{
-                    Timber.d("$it")
-                }
-                else -> {
-                    //Loading 상황
-                }
-            }
-        }
+    /**
+     *
+     * toolbar를 설정하는 function
+     *
+     * @author wooyj
+     *
+     */
+    private fun setMyToolbar() {
+        var actionbar = binding.toolbar
+        setSupportActionBar(actionbar)
     }
 
 }

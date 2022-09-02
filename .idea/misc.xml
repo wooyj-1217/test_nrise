@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/wippy_ranking_result_wave.xml" value="0.212" />
         <entry key="app/src/main/res/font/font.xml" value="0.3925925925925926" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_my_ranking_list.xml" value="0.18229166666666666" />
         <entry key="app/src/main/res/layout/vh_list_item.xml" value="0.3736413043478261" />
       </map>
     </option>

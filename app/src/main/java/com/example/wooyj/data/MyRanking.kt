@@ -1,4 +1,4 @@
-package com.example.wooyj.network
+package com.example.wooyj.data
 
 data class MyRanking(
     val location : String,

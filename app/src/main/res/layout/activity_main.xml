@@ -1,187 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        app:contentInsetStart="0dp"
-        app:contentInsetEnd="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.utils.widget.ImageFilterView
-                android:id="@+id/iv_btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/wippy_common_back_btn_off"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_header_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="우리 동네 랭킹"
-                android:textSize="18dp"
-                android:textColor="@color/WIFFY_Gray_900"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_btn_back"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:id="@+id/gradient_top"
-        android:layout_width="match_parent"
-        android:layout_height="246dp"
-        android:background="@drawable/gradient_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:id="@+id/wave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/wippy_ranking_result_wave"
-        app:layout_constraintBottom_toBottomOf="@id/gradient_top" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_my_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/wave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/gradient_top">
-
-        <TextView
-            android:id="@+id/tv_region"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/WIFFY_White"
-            android:textSize="22dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="64dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="서울시 강남구" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_profile_image"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_rank"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_region"
-            app:shapeAppearanceOverlay="@style/roundedImageView"
-            tools:src="@tools:sample/avatars" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/iv_btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/wippy_common_back_btn_off"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="14dp"
-            android:includeFontPadding="false"
-            android:textColor="@color/WIFFY_White"
-            android:textSize="44dp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_label_rank"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
-            app:layout_constraintTop_toBottomOf="@id/tv_region"
-            tools:text="89" />
+                <TextView
+                    android:id="@+id/tv_header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="우리 동네 랭킹"
+                    android:textColor="@color/WIFFY_Gray_900"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_btn_back"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_label_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:includeFontPadding="false"
-            android:textColor="@color/WIFFY_White"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_rank"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_rank"
-            tools:text="위" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
 
-        <TextView
-            android:id="@+id/tv_content_line1"
-            style="@style/content_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_rank"
-            tools:text="오늘 위피를 이용한 20~24세 동성 친구들 중" />
-
-        <TextView
-            android:id="@+id/tv_content_line2_label_1"
-            style="@style/content_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="인기도는 "
-            app:layout_constraintEnd_toStartOf="@+id/tv_percentage"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_content_line1" />
-
-        <TextView
-            android:id="@+id/tv_percentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/WIFFY_White"
-            android:textSize="14dp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_content_line2_label_1"
-            app:layout_constraintEnd_toStartOf="@+id/tv_content_line2_label_2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_content_line2_label_1"
-            tools:text="상위 60%" />
-
-        <TextView
-            android:id="@+id/tv_content_line2_label_2"
-            style="@style/content_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 입니다."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_percentage"
-            app:layout_constraintTop_toTopOf="@id/tv_content_line2_label_1" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:clipToPadding="false"
-        android:paddingTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wave"
-        tools:listitem="@layout/vh_list_item" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>

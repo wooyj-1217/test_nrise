@@ -1,24 +1,23 @@
-package com.example.wooyj
+package com.example.wooyj.fragments
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.asLiveData
+import com.example.wooyj.data.MyRanking
 import com.example.wooyj.data.Resource
-import com.example.wooyj.network.MyRanking
 import com.example.wooyj.network.NetworkRepository
-import com.example.wooyj.network.NetworkService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
-    val networkRepository: NetworkRepository,
+class MyRankingListViewModel @Inject constructor(
+    private val networkRepository: NetworkRepository,
     application: Application,
 ) : AndroidViewModel(application) {
-
 
     val res: LiveData<Resource<MyRanking>>
         get() = _res
@@ -35,6 +34,5 @@ class MainViewModel @Inject constructor(
     }.catch { error ->
         emit(Resource.error(error.localizedMessage, null))
     }.asLiveData()
-
 
 }
